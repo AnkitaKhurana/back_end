@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title%></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+
+<h1>Welcome</h1><h2><%=username%></h2>
+
+<form action="http://localhost:3456/addMessage" method="post">
+<label name="message" style="background-color: gold">
+<%- messages%>
+</label>
+    <!--<label name="who" value=`<%=username%>`></label>-->
+    <input value="<%=username%>" name="NN"  style="display: none">
+    <br>
+    <input placeholder="Write your message" name="newmessage">
+
+
+    <input type="submit" value="Send">
+</form>
+
+
+
+</body>
+</html>
