@@ -34,8 +34,8 @@ app.use('/api', require('./routes/api'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
-app.listen(process.env.PORT||3456, function () {
+# process.env.PORT||
+app.listen(3456, function () {
     console.log("Server started on http://localhost:", this.address().port);
 });
 if(process.env.NODE_ENV !== 'production') {
