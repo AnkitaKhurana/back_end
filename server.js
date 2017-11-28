@@ -38,6 +38,8 @@ app.set('view engine', 'ejs');
 app.listen(process.env.PORT||3456, function () {
     console.log("Server started on http://localhost:", this.address().port);
 });
+
+
 if(process.env.NODE_ENV !== 'production') {
     process.once('uncaughtException', function(err) {
         console.error('FATAL: Uncaught exception.');
