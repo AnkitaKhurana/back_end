@@ -10,7 +10,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnkitaKhurana/ChatApp.git"
+    "url": "git+https://github.com/AnkitaKhurana/back_end.git"
   },
   "keywords": [
     "chat",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/AnkitaKhurana/Chat_App#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
