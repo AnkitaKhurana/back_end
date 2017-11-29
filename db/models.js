@@ -1,10 +1,18 @@
 const Sequelize = require('sequelize');
-
-
-
-const db = new Sequelize('ChatApp', 'root', '1234', {
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialect: 'postgres',
+    protocol: 'postgres',
+    dialectOptions: {
+        ssl: true
+    }
+});
+const db = new sequelize('ChatApp', 'root', '1234', {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: 'mysql'||'postgres',
+    dialectOptions: {
+        ssl: true
+    },
+
 });
 
 const Msg = db.define('msg',{
