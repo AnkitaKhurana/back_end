@@ -49,8 +49,6 @@ route.post('/signup', (req, res) => {
 
 
 
-
-
 route.post('/login',passport.authenticate('local',{
 
     successRedirect:'/chatwindow/',
@@ -85,7 +83,7 @@ route.get('/chatwindow',eli('/'),(req,res)=>{
 
 });
 
-route.get('/profile', (req, res) => {
+route.get('/profile',eli('/'), (req, res) => {
     // console.log(req.user);
     res.send(req.user);
 
