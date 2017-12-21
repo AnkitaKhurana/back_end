@@ -41,9 +41,14 @@ route.post('/signup', (req, res) => {
 
     }).then((user) => {
         console.log(user.password);
-        res.redirect('/')
+        res.send(user);
+        // res.redirect('/')
     })
 });
+
+
+
+
 
 
 route.post('/login',passport.authenticate('local',{
@@ -75,8 +80,8 @@ route.post('/addMessage',eli('/'),(req,res)=>{
 
 
 route.get('/chatwindow',eli('/'),(req,res)=>{
-
-        res.render('chat', { title: 'CHATAPP',username:req.user.username,messages:msg});
+         res.send(req.user);
+        // res.render('chat', { title: 'CHATAPP',username:req.user.username,messages:msg});
 
 });
 
