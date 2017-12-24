@@ -43,17 +43,25 @@ route.post('/signup', (req, res) => {
         console.log(user.password);
         res.send(user);
         // res.redirect('/')
-    })
+    },()=>{res.send(null);}
+
+    )
 });
 
+route.post('/login',passport.authenticate('local'),
+    function(req, res) {
+        // If this function gets called, authentication was successful.
+        // `req.user` contains the authenticated user.
 
+        res.send(req.user);
+    }    );
 
-
-route.post('/login',passport.authenticate('local',{
-
-    successRedirect:'/chatwindow/',
-    failureRedirect:'/'
-}));
+//
+// route.post('/login',passport.authenticate('local',{
+//
+//     successRedirect:'/chatwindow/',
+//     failureRedirect:'/'
+// }));
 
 
 
