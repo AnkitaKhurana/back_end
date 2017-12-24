@@ -15,9 +15,9 @@ const myPlaintextPassword = 's0/\/\P4$$w0rD';
 let msg='';
 
 route.get('/',(req,res)=>{
-    // res.send(req.user);
+    res.send(req.user);
 
-    res.render('index', { title: 'CHATAPP'});
+    // res.render('index', { title: 'CHATAPP'});
 
 });
 
@@ -88,7 +88,6 @@ route.get('/profile',eli('/'), (req, res) => {
     res.send(req.user);
 
 });
-
 
 
 
