@@ -75,12 +75,22 @@ route.get('/logout', (req, res) => {
 });
 
 
-route.post('/display',eli('/'),(req,res)=>{
+route.get('/display',eli('/'),(req,res)=>{
 
     res.send(msg);
 
 });
 
+
+route.post('/new_Message',eli('/'),(req,res)=>{
+
+    // console.log(req.body.username);
+    msg+='\n'+(req.body.NN)+': '+(req.body.newmessage);
+
+    msg = msg.replace(/\n/g, '<br/>');
+    res.send(msg);
+
+});
 
 route.post('/addMessage',eli('/'),(req,res)=>{
 
