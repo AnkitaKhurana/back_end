@@ -82,7 +82,7 @@ route.get('/display',eli('/'),(req,res)=>{
 });
 
 
-route.post('/new_Message',eli('/'),(req,res)=>{
+route.post('/new_message',eli('/'),(req,res)=>{
 
     // console.log(req.body.username);
     msg+='\n'+(req.body.NN)+': '+(req.body.newmessage);
